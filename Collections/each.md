@@ -17,7 +17,7 @@ _.each({one: 1, two: 2, three: 3}, alert);
 => alerts 1 2 3
 ```
 
-## 注意：集合函数能在数组，对象，和类数组对象，比如arguments, NodeList和类似的数据类型上正常工作。 
+#### 注意：集合函数能在数组，对象，和类数组对象，比如arguments, NodeList和类似的数据类型上正常工作。 
 但是它通过鸭子类型工作，所以要避免传递带有一个数值类型 length 属性的对象。
 每个循环不能被破坏 - 打破， 使用_.find代替，这也是很好的注意。
 
@@ -26,7 +26,6 @@ _.each({one: 1, two: 2, three: 3}, alert);
 const MAX_ARRAY_INDEX = Math.pow(2, 53) - 1;
 
 /* 获取属性函数 */
-
 const property = function(key) {
   return function(obj) {
     return obj == null ? void 0 : obj[key];
@@ -34,7 +33,7 @@ const property = function(key) {
 };
 const getLength = property('length');
 const isArrayLike = function(collection) {
-  /* 获取 元素的length属性 做以下判断，确定是否为 数组或伪数组 */
+  /* 获取 元素的length属性 做以下判断，确定是否为 集合 */
   const length = getLength(collection);
   return typeof length == 'number' && length >= 0 && length <= MAX_ARRAY_INDEX;
 };

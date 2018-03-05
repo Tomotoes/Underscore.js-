@@ -68,13 +68,16 @@ const optimizeCb = function(func, context, argCount) {
 _.each = _.forEach = function(obj, iteratee, context) {
   iteratee = optimizeCb(iteratee, context);
   let i, length;
+  /* 如果是集合 */
   if (isArrayLike(obj)) {
     for (i = 0, length = obj.length; i < length; i++) {
       iteratee(obj[i], i, obj);
     }
   } else {
+    /* 获取 对象的可遍历键名数组 */
     var keys = _.keys(obj);
     for (i = 0, length = keys.length; i < length; i++) {
+      /* obj[keys[i]] 也就是 objs[当前属性名] 即 value*/
       iteratee(obj[keys[i]], keys[i], obj);
     }
   }

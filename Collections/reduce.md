@@ -7,7 +7,7 @@
 如果没有memo传递给reduce的初始调用，iteratee不会被列表中的第一个元素调用。
 第一个元素将取代memo参数传递给列表中下一个元素调用的iteratee函数。
 
-Eg:
+### Eg:
 ```js
 var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
 => 6
@@ -16,13 +16,14 @@ var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
 
 > reducRight是从右侧开始组合元素的reduce函数， Foldr在 JavaScript 中不像其它有惰性求值的语言那么有用
 
-Eg:
+### Eg:
 ```js
 var list = [[0, 1], [2, 3], [4, 5]];
 var flat = _.reduceRight(list, function(a, b) { return a.concat(b); }, []);
 => [4, 5, 2, 3, 0, 1]
 ```
 
+### sourceCode
 ```js
 /* 数组最大的元素数量 */
 const MAX_ARRAY_INDEX = Math.pow(2, 53) - 1;

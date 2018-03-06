@@ -2,12 +2,13 @@
 > 在list中逐项查找，返回第一个通过predicate迭代函数真值检测的元素值，如果没有元素通过检测则返回 undefined。 
 > 如果找到匹配的元素，函数将立即返回，不会遍历整个list。
 
-Eg: 
+### Eg: 
 ```js
 var even = _.find([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 => 2
 ```
 
+### sourceCode
 ```js
 /* 数组最大的元素数量 */
 const MAX_ARRAY_INDEX = Math.pow(2, 53) - 1;

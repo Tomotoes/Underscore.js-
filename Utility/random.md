@@ -2,7 +2,7 @@
 
 > 返回一个min 和 max之间的随机整数。如果你只传递一个参数，那么将返回0和这个参数之间的整数。
 
-Eg:
+### Eg:
 
 ```js
 _.random(0, 100);
@@ -11,6 +11,7 @@ _.random(0, 100);
 => 2
 ```
 
+### sourceCode
 ```js
 .random = function(min, max) {
   if (max == null) {

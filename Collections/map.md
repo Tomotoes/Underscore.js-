@@ -3,7 +3,7 @@
 > 通过对list里的每个元素调用转换函数(iteratee迭代器)生成一个与之相对应的数组。
 > iteratee传递三个参数：value，然后是迭代 index 或 key ，最后一个是引用指向整个list。
 
-Eg:
+### Eg:
 ```js
 _.map([1, 2, 3], function(num){ return num * 3; });
 => [3, 6, 9]
@@ -13,6 +13,7 @@ _.map([[1, 2], [3, 4]], _.first);
 => [1, 3]
 ```
 
+### sourceCode
 ```js
 const property = function(key) {
   return function(obj) {

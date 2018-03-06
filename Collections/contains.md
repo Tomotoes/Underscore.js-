@@ -3,14 +3,14 @@
 > 如果list 是数组，内部使用indexOf判断。
 > 使用fromIndex来给定开始检索的索引位置。
 
-Eg:
+### Eg:
 ```js
 _.contains([1, 2, 3], 3);
 => true
 ```
 
+### sourceCode
 ```js
-
 _.contains = _.includes = _.include = function(obj, item, fromIndex, guard) {
   /* 如果是对象 返回 value组成的数组 */
   if (!isArrayLike(obj)) obj = _.values(obj);

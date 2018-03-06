@@ -3,13 +3,14 @@
 > 如果传递iteratee参数，iteratee将作为list中每个值的排序依据。
 > 如果list为空，将返回-Infinity，所以你可能需要事先用isEmpty检查 list 。
 
-Eg:
+### Eg:
 ```js
 var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
 _.max(stooges, function(stooge){ return stooge.age; });
 => {name: 'curly', age: 60};
 ```
 
+### sourceCode
 ```js
  _.max = function(obj, iteratee, context) {
   var result = -Infinity, lastComputed = -Infinity,

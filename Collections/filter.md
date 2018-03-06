@@ -2,11 +2,13 @@
 
 > 遍历list中的每个值，返回所有通过predicate真值检测的元素所组成的数组。
 
+### Eg:
 ```js
 var evens = _.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 => [2, 4, 6]
 ```
 
+### sourceCode
 ```js
 
 _.each = _.forEach = function(obj, iteratee, context) {

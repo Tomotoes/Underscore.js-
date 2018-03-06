@@ -1,12 +1,13 @@
 # size_.size(list) 
 > 返回list的长度。
 
-Eg:
+### Eg:
 ```js
 _.size({one: 1, two: 2, three: 3});
 => 3
 ```
 
+### sourceCode
 ```js
 _.size = function(obj) {
   if (obj == null) return 0;

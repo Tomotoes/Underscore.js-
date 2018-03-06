@@ -1,12 +1,13 @@
 # toArray_.toArray(list) 
 > 把list(任何可以迭代的对象)转换成一个数组，在转换 arguments 对象时非常有用。
 
-Eg:
+### Eg:
 ```js
 (function(){ return _.toArray(arguments).slice(1); })(1, 2, 3, 4);
 => [2, 3, 4]
 ```
 
+### sourceCode
 ```js
 var property = function(key) {
   return function(obj) {
